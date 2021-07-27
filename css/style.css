@@ -1,0 +1,80 @@
+/* global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    position: relative;
+}
+img {
+    display: block;
+}
+
+/* header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+header .logo {
+    display: none;
+}
+
+/* hero */
+.hero {
+    height: 100vh;
+    background: url(../img/promo-bg.jpg) center / cover no-repeat;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+.hero-wrap {
+    z-index: 1;
+}
+
+/* partners */
+.partners {
+    text-align: center;
+}
+.partner-list {
+    list-style: none;
+}
+.partner-photo {
+    display: inline-block;
+    position: relative;
+}
+.partner-photo img {
+    border-radius: 50%;
+}
+.partner-photo::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: -8px;
+    bottom: -8px;
+}
+.red::after {
+    background: #f00 url(../img/television.svg) center / 16px no-repeat;
+}
