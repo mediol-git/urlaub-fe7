@@ -14,7 +14,7 @@ img {
 /* header */
 header {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 15px;
     position: absolute;
     width: 100%;
     top: 0;
@@ -23,6 +23,24 @@ header {
 }
 header .logo {
     display: none;
+}
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .logo {
+        display: block;
+    }
+}
+@media (min-width: 1200px) {
+    header {
+        width: 972px;
+        max-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /* hero */
@@ -49,13 +67,48 @@ header .logo {
 .hero-wrap {
     z-index: 1;
 }
+@media (min-width: 768px) {
+    .hero .logo {
+        display: none;
+    }
+}
 
 /* partners */
 .partners {
     text-align: center;
+    padding: 70px 30px 55px;
 }
 .partner-list {
     list-style: none;
+}
+.partner-list li {
+    margin: 20px 0 28px;
+}
+@media (min-width: 768px) {
+    .partner-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 15%;
+    }
+    .partner-list li {
+        width: 50%;
+        margin: 30px 0 60px;
+        padding: 0 25px;
+    }
+}
+@media (min-width: 1200px) {
+    .partners {
+        width: 972px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .partner-list {
+        padding: 0;
+    }
+    .partner-list li {
+        width: 25%;
+    }
 }
 .partner-photo {
     display: inline-block;
@@ -78,3 +131,20 @@ header .logo {
 .red::after {
     background: #f00 url(../img/television.svg) center / 16px no-repeat;
 }
+.gold::after {
+    background: #ffa507 url(../img/flask.svg) center / 16px no-repeat;
+}
+.green::after {
+    background: green url(../img/flask.svg) center / 16px no-repeat;
+}
+.blue::after {
+    background: blue url(../img/flask.svg) center / 16px no-repeat;
+}
+
+/* @media (min-width: 768px) {
+    
+}
+
+@media (min-width: 1024px) {
+    
+} */
